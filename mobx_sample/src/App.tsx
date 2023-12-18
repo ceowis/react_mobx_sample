@@ -1,26 +1,19 @@
-import './App.css';
+import React, { Component } from 'react';
+import { observer, PropTypes } from 'mobx-react';
+import _ from 'lodash';
+import TodoList from './components/TodoList.tsx';
+import TodoAdd from './components/AddTodo.tsx';
 
-const logo = require('./logo.svg'); // import logo from './logo.svg';
-
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="container">
+        <h1>Todos</h1>
+        <TodoAdd />
+        <TodoList />
+      </div>
+    </>
   );
-}
+};
 
 export default App;
