@@ -1,18 +1,22 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { observer } from 'mobx-react';
-import TodoStore from '../stores/TodoStore.ts';
+import TodoStoreNew from '../stores/TodoStoreNew.ts';
 
-const AddTodo = () => {
+const AddTodoNew = () => {
   const [title, setTitle] = useState('');
-  const todoStore = useContext(TodoStore);
+  const todoStore = TodoStoreNew.instance;
   const { addTodo, info } = todoStore;
+
+  // useEffect(() => {
+  //   console.log('변경됨-> state 값 저장', info.total);
+  // });
 
   return (
     <>
       <div className="alert alert-primary">
         <div className="d-inline col-4">
           전체 아이템 갯수: &nbsp;
-          <span className="badge badge-info">{info.total}</span>
+          <span className="badge badge-info">{info.total}</span> <br />
         </div>
         <div className="d-inline col-4">
           종료된 아이템: &nbsp;
@@ -30,7 +34,8 @@ const AddTodo = () => {
           value={title}
           placeholder="Todo title..."
           onChange={e => setTitle(e.target.value)}
-        /> &nbsp;
+        />{' '}
+        &nbsp;
         <button
           className="btn btn-primary"
           onClick={_ => {
@@ -48,4 +53,4 @@ const AddTodo = () => {
   );
 };
 
-export default observer(AddTodo);
+export default observer(AddTodoNew);

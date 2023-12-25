@@ -1,10 +1,10 @@
 import React, { useCallback, useContext, useEffect } from 'react';
 import { observer } from 'mobx-react';
-import TodoStore from '../stores/TodoStore.ts';
+// import TodoStore from '../stores/TodoStore.ts';
+import TodoStoreNew from 'src/stores/TodoStoreNew.ts';
 
-const TodoList = () => {
-  const todoStore = useContext(TodoStore);
-  const { todos, toggleTodo, removeTodo } = todoStore;
+const TodoListNewFunc = () => {
+  const { todos, toggleTodo, removeTodo } = TodoStoreNew.instance;
 
   const rederingList = useCallback(() => {
     return todos.map(todo => (
@@ -29,11 +29,6 @@ const TodoList = () => {
     ));
   }, [todos]);
 
-  //  useEffect(()=>{
-  //   console.log('변경됨 다시 그리기')
-  //    rederingList();
-  //  } ,[todos.length]);
-
   return (
     <>
       <div className="row">
@@ -52,4 +47,4 @@ const TodoList = () => {
   );
 };
 
-export default observer(TodoList);
+export default observer(TodoListNewFunc);

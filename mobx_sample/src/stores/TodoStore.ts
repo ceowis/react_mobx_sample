@@ -29,10 +29,10 @@ class TodoStore {
     console.log('store val : ', { ...todo, id: uuidv4() });
     this.todos.push({ ...todo, id: uuidv4() });
   };
-
+  /* toggle버튼 클릭 */
   @action toggleTodo = (id: string) => {
     this.todos = this.todos.map(todo => {
-      console.log('id : ', id, 'todo.id : ', todo.id);
+      // console.log('id : ', id, 'todo.id : ', todo.id);
       if (todo.id === id) {
         return {
           ...todo,
@@ -44,6 +44,7 @@ class TodoStore {
   };
 
   @action removeTodo = (id: string) => {
+    console.log('remove 버튼 클릭', id);
     this.todos = this.todos.filter(todo => todo.id !== id);
   };
 

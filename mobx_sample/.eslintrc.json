@@ -66,6 +66,10 @@
       }
     ],
     "react/jsx-no-useless-fragment": "warn",
+    "react/jsx-filename-extension": [
+      2,
+      { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
+    ],
     "react/function-component-definition": [
       2,
       { "namedComponents": ["arrow-function", "function-declaration"] }
@@ -73,9 +77,6 @@
     "no-undef": 1,
     "no-unused-vars": 1,
     "import/no-unresolved": 1,
-    "react/jsx-filename-extension": [
-      2,
-      { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
-    ]
+    "lines-between-class-members":"off"
   }
 }
