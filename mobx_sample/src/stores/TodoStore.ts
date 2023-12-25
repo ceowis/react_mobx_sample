@@ -1,4 +1,10 @@
-import { observable, action, computed, reaction } from 'mobx';
+import {
+  observable,
+  action,
+  computed,
+  reaction,
+  makeAutoObservable,
+} from 'mobx';
 import { createContext } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -9,11 +15,17 @@ export type Todo = {
 };
 
 class TodoStore {
+  /** 아래 코드 문제 있음.  */
+  // constructor() {
+  //   reaction(
+  //     () => this.todos,
+  //     _ => console.log(this.todos.length),
+  //   );
+  // }
+
+  /* 아래로 대체하면 정상 실행됨 */
   constructor() {
-    reaction(
-      () => this.todos,
-      _ => console.log(this.todos.length),
-    );
+    makeAutoObservable(this);
   }
 
   @observable todos: Todo[] = [
@@ -32,7 +44,15 @@ class TodoStore {
   /* toggle버튼 클릭 */
   @action toggleTodo = (id: string) => {
     this.todos = this.todos.map(todo => {
-      // console.log('id : ', id, 'todo.id : ', todo.id);
+      console.log(
+        'id : ',
+        id,
+        'todo.id : ',
+        todo.id,
+        'todo.completed : ',
+        todo.completed,
+      );
+
       if (todo.id === id) {
         return {
           ...todo,

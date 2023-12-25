@@ -29,11 +29,6 @@ const TodoList = () => {
     ));
   }, [todos]);
 
-  //  useEffect(()=>{
-  //   console.log('변경됨 다시 그리기')
-  //    rederingList();
-  //  } ,[todos.length]);
-
   return (
     <>
       <div className="row">
@@ -45,7 +40,28 @@ const TodoList = () => {
               <th>Actions</th>
             </tr>
           </thead>
-          <tbody>{rederingList()}</tbody>
+          <tbody>
+            {todos.map(todo => (
+              <tr key={todo.id}>
+                <td>{todo.title}</td>
+                <td>{todo.completed ? '✅' : ''}</td>
+                <td>
+                  <button
+                    className="btn btn-sm btn-info"
+                    onClick={_ => toggleTodo(todo.id!)}
+                  >
+                    Toggle
+                  </button>
+                  <button
+                    className="btn btn-sm btn-danger"
+                    onClick={_ => removeTodo(todo.id!)}
+                  >
+                    Remove
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
         </table>
       </div>
     </>
