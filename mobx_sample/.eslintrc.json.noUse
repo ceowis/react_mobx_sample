@@ -6,7 +6,8 @@
   },
   "extends": [
     "plugin:react/recommended",
-    // "eslint:recommended",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
     "airbnb",
     "prettier"
   ],
@@ -15,7 +16,7 @@
     "ecmaVersion": 10,
     "sourceType": "module"
   },
-  "plugins": ["react"],
+  "plugins": ["react", "@typescript-eslint"],
   "rules": {
     // "prettier/prettier": ["error"],
     "quotes": [2, "single"],
@@ -53,8 +54,10 @@
       { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
     ],
     "jsx-a11y/no-noninteractive-element-interactions": 0,
-    "@typescript-eslint/explicit-module-boundary-types": 0
+    
     */
+    "@typescript-eslint/explicit-module-boundary-types": 0,
+    "@typescript-eslint/no-unused-vars": 0,
     "arrow-body-style": "off",
     "object-shorthand": "off",
     "react/button-has-type": [
@@ -77,6 +80,6 @@
     "no-undef": 1,
     "no-unused-vars": 1,
     "import/no-unresolved": 1,
-    "lines-between-class-members":"off"
+    "lines-between-class-members": "off"
   }
 }
