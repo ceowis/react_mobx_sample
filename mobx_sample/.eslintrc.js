@@ -1,7 +1,7 @@
 /* eslint-env node */
 module.exports = {
   root: true,
-  parser: '@typescript-eslint/parser',
+  parser: '@typescript-eslint/parser', // @babel/eslint-parser , @typescript-eslint/parser
   plugins: ['react', '@typescript-eslint'],
   extends: [
     'prettier',
@@ -48,6 +48,7 @@ module.exports = {
     'react/destructuring-assignment': 0,
     'react/no-unuse-prop-types': 0,
     'react/no-danger': 0,
+    'react/react-in-jsx-scope': 0,
     '@typescript-eslint/ban-types': 0,
     '@typescript-eslint/no-empty-interface': 0,
     '@typescript-eslint/no-empty-function': 0,
@@ -79,9 +80,11 @@ module.exports = {
     'arrow-parens': 0,
     'consistent-return': 1,
     'object-curly-newline': 1,
-    'react/button-has-type': 1,
-    'react/react-in-jsx-scope': 1,
+    'react/button-has-type': 0,
     'react/jsx-one-expression-per-line': 'off',
     'arrow-body-style': [0],
+    'no-trailing-spaces': 0,
+    'padded-blocks': 0,
+    'react/prop-types': 0,
   },
 };
