@@ -11,6 +11,12 @@ const MobxSample = () => {
     <>
       <div className="container">
         <h1>Mobx Example</h1>
+        <TodoAdd />
+        <br />
+        <TodoList />
+        <br />
+        <TodoAddNew />
+        <TodoListNew />
       </div>
     </>
   );

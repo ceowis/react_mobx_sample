@@ -25,8 +25,12 @@ import React from 'react';
 import Root from './routes/root.tsx';
 import ErrorPage from './error-page.tsx';
 import Contact from './routes/contact.tsx';
-import GridSample from './routes/gridsample.tsx';
-import MobxSample from './routes/mobxsample.tsx';
+import MobxSample from './routes/MobxSample.tsx';
+import GridSample from './routes/GridSample.tsx';
+import App from './App.tsx';
+
+const realGrid2Lic =
+  'upVcPE+wPOmtLjqyBIh9RkM/nBOseBrflwxYpzGZyYm9cY8amGDkiMnVeQKUHJDjW2y71jtk+wte7L7C4dZzvFRtu9Bz90f9w1ScDYRVGVc=';
 
 const router = createBrowserRouter([
   {
@@ -39,12 +43,16 @@ const router = createBrowserRouter([
         element: <Contact />,
       },
       {
-        path: 'gridexample',
+        path: 'GridSample',
         element: <GridSample />,
       },
       {
-        path: 'mobx_example',
+        path: 'MobxSample',
         element: <MobxSample />,
+      },
+      {
+        path: 'App',
+        element: <App />,
       },
     ],
   },

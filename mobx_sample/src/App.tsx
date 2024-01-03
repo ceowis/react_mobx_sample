@@ -1,28 +1,34 @@
-import React, { Component } from 'react';
+import React, { Component, useEffect, useRef } from 'react';
 import { observer, PropTypes } from 'mobx-react';
 import _ from 'lodash';
-import TodoList from './components/TodoList.tsx';
-import TodoAdd from './components/AddTodo.tsx';
-import TodoAddNew from './components/AddTodoNew.tsx';
-import TodoListNew from './components/TodoListNew.tsx';
-import TodoListNewFunc from './components/TodoListNewFunc.tsx';
+import { GridView, LocalDataProvider } from 'realgrid';
+import { columns, fields, rows } from './realgrid-data.js';
 
 const App = () => {
-  return (
-    <>
-      <div className="container">
-        <h1>Todos</h1>
-        <TodoAdd />
-        <br />
-        <TodoList />
-        <br />
-        <TodoAddNew />
-        <TodoListNew />
+  const realgridElement = useRef<any>();
 
-        <br />
-        <TodoListNewFunc />
-      </div>
-    </>
+  useEffect(() => {
+    const container = realgridElement.current;
+    const dp = new LocalDataProvider(true);
+    const gv = new GridView(container);
+
+    gv.setDataSource(dp);
+    dp.setFields(fields);
+    gv.setColumns(columns);
+    dp.setRows(rows);
+
+    return () => {
+      dp.clearRows();
+      gv.destroy();
+      dp.destroy();
+    };
+  }, []);
+
+  return (
+    <div className="App">
+      <h2>RealGrid2 React Sample</h2>
+      <div style={{ height: '500px', width: '100%' }} ref={realgridElement} />
+    </div>
   );
 };
 

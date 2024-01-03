@@ -55,6 +55,8 @@ module.exports = {
     '@typescript-eslint/no-var-requires': 0,
     '@typescript-eslint/no-explicit-any': 0,
     '@typescript-eslint/explicit-module-boundary-types': 0,
+    '@typescript-eslint/ban-ts-comment': 0,
+
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': ['off'],
     '@next/next/no-img-element': 'off',
@@ -77,6 +79,7 @@ module.exports = {
     'lines-between-class-members': 'off',
     'max-classes-per-file': 0,
     'react-hooks/exhaustive-deps': 0,
+    'react-hooks/rules-of-hooks': 0,
     'arrow-parens': 0,
     'consistent-return': 1,
     'object-curly-newline': 1,
@@ -86,5 +89,8 @@ module.exports = {
     'no-trailing-spaces': 0,
     'padded-blocks': 0,
     'react/prop-types': 0,
+    'operator-linebreak': 0,
+    'no-multi-assign': 0,
+    'react/jsx-indent': 0,
   },
 };
