@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 
+// 테스트1
 const App = ({ Component, pageProps }) => (
   <>
     <Head>
