@@ -32,7 +32,7 @@ export default function Root() {
               <Link to="contacts/2">Your Friend</Link>
             </li>
             <li>
-              <Link to="GridSample">realGrid샘플</Link>
+              <Link to="ModalSample">모달 샘플</Link>
             </li>
             <li>
               <Link to="MobxSample">mobx샘플</Link>

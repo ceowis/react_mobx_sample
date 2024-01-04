@@ -26,7 +26,7 @@ import Root from './routes/root.tsx';
 import ErrorPage from './error-page.tsx';
 import Contact from './routes/contact.tsx';
 import App from './App.tsx';
-import GridSample from './routes/GridSample.tsx';
+import ModalSample from './routes/ModalSample.tsx';
 import MobxSample from './routes/MobxSample.tsx';
 
 const realGrid2Lic =
@@ -43,8 +43,8 @@ const router = createBrowserRouter([
         element: <Contact />,
       },
       {
-        path: 'GridSample',
-        element: <GridSample />,
+        path: 'ModalSample',
+        element: <ModalSample />,
       },
       {
         path: 'MobxSample',
