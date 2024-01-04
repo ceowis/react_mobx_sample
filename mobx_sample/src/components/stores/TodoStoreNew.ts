@@ -1,11 +1,11 @@
 import { computed, makeAutoObservable } from 'mobx';
 import { v4 as uuidv4 } from 'uuid';
 
-export type Todo = {
-  id?: string;
-  title: string;
-  completed: boolean;
-};
+// export type Todo = {
+//   id?: string;
+//   title: string;
+//   completed: boolean;
+// };
 
 const DEFALUT_VALUE = [
   { id: uuidv4(), title: 'Item #1', completed: false },
@@ -19,13 +19,13 @@ const DEFALUT_VALUE = [
 class TodoStoreNew {
   static instance: TodoStoreNew;
 
-  todos: Todo[] = DEFALUT_VALUE;
+  todos: any[] = DEFALUT_VALUE;
 
   constructor() {
     makeAutoObservable(this);
   }
 
-  addTodo = (todo: Todo) => {
+  addTodo = (todo: any) => {
     this.todos.push({ ...todo, id: uuidv4() });
   };
 

@@ -5,7 +5,7 @@ import { GridView, LocalDataProvider } from 'realgrid';
 import { columns, fields, rows } from './realgrid-data.js';
 
 const App = () => {
-  const realgridElement = useRef<any>();
+  const realgridElement = useRef<any>(null);
 
   useEffect(() => {
     const container = realgridElement.current;

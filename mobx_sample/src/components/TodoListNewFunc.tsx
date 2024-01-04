@@ -1,7 +1,7 @@
 import React, { useCallback, useContext, useEffect } from 'react';
 import { observer } from 'mobx-react';
 // import TodoStore from '../stores/TodoStore.ts';
-import TodoStoreNew from 'src/stores/TodoStoreNew.ts';
+import TodoStoreNew from 'src/components/stores/TodoStoreNew';
 
 const TodoListNewFunc = () => {
   const { todos, toggleTodo, removeTodo } = TodoStoreNew.instance;
@@ -14,13 +14,13 @@ const TodoListNewFunc = () => {
         <td>
           <button
             className="btn btn-sm btn-info"
-            onClick={_ => toggleTodo(todo.id!)}
+            onClick={_ => toggleTodo(todo && todo.id ? todo.id : '')}
           >
             Toggle
           </button>
           <button
             className="btn btn-sm btn-danger"
-            onClick={_ => removeTodo(todo.id!)}
+            onClick={_ => removeTodo(todo && todo.id ? todo.id : '')}
           >
             Remove
           </button>

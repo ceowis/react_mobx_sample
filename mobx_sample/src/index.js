@@ -1,7 +1,8 @@
 import React from 'react';
+import { Main } from './components/router.tsx';
 
 const Index = () => {
-  return <div>첫 화면</div>;
+  return <Main />;
 };
 
 export default Index;

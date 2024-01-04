@@ -1,7 +1,7 @@
 import '../App.css';
 import { GridView, LocalDataProvider } from 'realgrid';
 import { useEffect, useRef } from 'react';
-import { columns, fields, rows } from '../realgrid-data';
+import { columns, fields, rows } from '../components/realgrid-data';
 import 'realgrid/dist/realgrid-style.css';
 
 function GridSample() {

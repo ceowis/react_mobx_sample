@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
 // import React from 'react';
 // import ReactDOM from 'react-dom/client';
 // import './index.css';
@@ -20,19 +21,19 @@
 
 import * as ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import './index.css';
+import '../index.css';
 import React from 'react';
-import Root from './routes/root.tsx';
+import Root from '../routes/root.tsx';
 import ErrorPage from './error-page.tsx';
-import Contact from './routes/contact.tsx';
+import Contact from '../routes/contact.tsx';
 import App from './App.tsx';
-import GridSample from './routes/GridSample.tsx';
-import MobxSample from './routes/MobxSample.tsx';
+import GridSample from '../routes/GridSample.tsx';
+import MobxSample from '../routes/MobxSample.tsx';
 
 const realGrid2Lic =
   'upVcPE+wPOmtLjqyBIh9RkM/nBOseBrflwxYpzGZyYm9cY8amGDkiMnVeQKUHJDjW2y71jtk+wte7L7C4dZzvFRtu9Bz90f9w1ScDYRVGVc=';
 
-const router = createBrowserRouter([
+export const router = createBrowserRouter([
   {
     path: '/',
     element: <Root />,
@@ -58,9 +59,12 @@ const router = createBrowserRouter([
   },
 ]);
 
-const root = ReactDOM.createRoot(document.getElementById('root')!);
-root.render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>,
-);
+const rootEl = document.getElementById('root');
+if (rootEl !== null || rootEl !== undefined) {
+  const root = ReactDOM.createRoot(rootEl!);
+  root.render(
+    <React.StrictMode>
+      <RouterProvider router={router} />;
+    </React.StrictMode>,
+  );
+}
