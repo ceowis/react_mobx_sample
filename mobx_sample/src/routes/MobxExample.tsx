@@ -1,10 +1,10 @@
 import { Form } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import TodoAdd from '../components/AddTodo';
-import TodoList from '../components/TodoList';
-import TodoAddNew from '../components/AddTodoNew';
-import TodoListNew from '../components/TodoListNew';
-import TodoListNewFunc from '../components/TodoListNewFunc';
+import TodoAdd from '../components/AddTodo.tsx';
+import TodoList from '../components/TodoList.tsx';
+import TodoAddNew from '../components/AddTodoNew.tsx';
+import TodoListNew from '../components/TodoListNew.tsx';
+import TodoListNewFunc from '../components/TodoListNewFunc.tsx';
 
 const MobxSample = () => {
   return (

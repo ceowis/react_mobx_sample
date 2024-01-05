@@ -1,4 +1,4 @@
-import Modal from 'src/components/Modal';
+import Modal from 'src/components/Modal.tsx';
 import '../App.css';
 
 import { useEffect, useRef, useState } from 'react';

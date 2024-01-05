@@ -35,7 +35,7 @@ export default function Root() {
               <Link to="ModalSample">모달 샘플</Link>
             </li>
             <li>
-              <Link to="MobxSample">mobx샘플</Link>
+              <Link to="MobxExample">mobx샘플</Link>
             </li>
             <li>
               <Link to="song">song</Link>
