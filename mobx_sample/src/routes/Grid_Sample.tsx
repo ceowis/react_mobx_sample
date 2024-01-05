@@ -4,7 +4,7 @@ import { useEffect, useRef } from 'react';
 import { columns, fields, rows } from '../components/realgrid-data';
 import 'realgrid/dist/realgrid-style.css';
 
-function GridSample() {
+function Grid_Sample() {
   const realgridElement = useRef<any>(null);
   console.log('GridSample 호출');
 
@@ -47,4 +47,4 @@ function GridSample() {
   );
 }
 
-export default GridSample;
+export default Grid_Sample;

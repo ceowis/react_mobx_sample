@@ -23,12 +23,12 @@ import * as ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import '../index.css';
 import React from 'react';
-import Root from '../routes/root.tsx';
-import ErrorPage from './error-page.tsx';
-import Contact from '../routes/contact.tsx';
-import App from './App.tsx';
-import GridSample from '../routes/GridSample.tsx';
-import MobxSample from '../routes/MobxSample.tsx';
+import Root from '../routes/root';
+import ErrorPage from './error-page';
+import Contact from '../routes/contact';
+import App from './App';
+import Grid_Sample from '../routes/Grid_Sample';
+import Mobx_Sample from '../routes/Mobx_Sample';
 
 const realGrid2Lic =
   'upVcPE+wPOmtLjqyBIh9RkM/nBOseBrflwxYpzGZyYm9cY8amGDkiMnVeQKUHJDjW2y71jtk+wte7L7C4dZzvFRtu9Bz90f9w1ScDYRVGVc=';
@@ -45,11 +45,11 @@ export const router = createBrowserRouter([
       },
       {
         path: 'GridSample',
-        element: <GridSample />,
+        element: <Grid_Sample />,
       },
       {
         path: 'MobxSample',
-        element: <MobxSample />,
+        element: <Mobx_Sample />,
       },
       {
         path: 'App',
