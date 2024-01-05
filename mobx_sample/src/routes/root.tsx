@@ -38,7 +38,7 @@ export default function Root() {
               <Link to="MobxExample">mobx샘플</Link>
             </li>
             <li>
-              <Link to="song">song</Link>
+              <Link to="Song">song</Link>
             </li>
           </ul>
         </nav>
