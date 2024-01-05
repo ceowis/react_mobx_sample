@@ -27,7 +27,7 @@ import ErrorPage from './error-page.tsx';
 import Contact from './routes/contact.tsx';
 import App from './App.tsx';
 import ModalSample from './routes/ModalSample.tsx';
-import MobxSample from './routes/MobxSample.tsx';
+import MobxExample from './routes/MobxExample.tsx';
 
 const realGrid2Lic =
   'upVcPE+wPOmtLjqyBIh9RkM/nBOseBrflwxYpzGZyYm9cY8amGDkiMnVeQKUHJDjW2y71jtk+wte7L7C4dZzvFRtu9Bz90f9w1ScDYRVGVc=';
@@ -47,8 +47,8 @@ const router = createBrowserRouter([
         element: <ModalSample />,
       },
       {
-        path: 'MobxSample',
-        element: <MobxSample />,
+        path: 'MobxExample',
+        element: <MobxExample />,
       },
       {
         path: 'App',
