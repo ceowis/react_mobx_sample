@@ -41,7 +41,7 @@ export default function Root() {
               <Link to="Song">song</Link>
             </li>
             <li>
-              <Link to="Mark">Mark</Link>
+              <Link to="Chan">chan</Link>
             </li>
           </ul>
         </nav>
