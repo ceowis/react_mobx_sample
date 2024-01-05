@@ -40,6 +40,9 @@ export default function Root() {
             <li>
               <Link to="Song">song</Link>
             </li>
+            <li>
+              <Link to="Chan">chan</Link>
+            </li>
           </ul>
         </nav>
       </div>
