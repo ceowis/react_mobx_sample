@@ -29,6 +29,7 @@ import App from './App.tsx';
 import ModalSample from './routes/ModalSample.tsx';
 import MobxExample from './routes/MobxExample.tsx';
 import Song from './routes/song.tsx';
+import Mark from './routes/Mark.tsx';
 
 const realGrid2Lic =
   'upVcPE+wPOmtLjqyBIh9RkM/nBOseBrflwxYpzGZyYm9cY8amGDkiMnVeQKUHJDjW2y71jtk+wte7L7C4dZzvFRtu9Bz90f9w1ScDYRVGVc=';
@@ -58,6 +59,10 @@ const router = createBrowserRouter([
       {
         path: 'song',
         element: <Song />,
+      },
+      {
+        path: 'Mark',
+        element: <Mark />,
       },
     ],
   },
