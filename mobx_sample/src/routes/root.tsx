@@ -43,6 +43,9 @@ export default function Root() {
             <li>
               <Link to="Chan">chan</Link>
             </li>
+            <li>
+              <Link to="Mark">Mark</Link>
+            </li>
           </ul>
         </nav>
       </div>
