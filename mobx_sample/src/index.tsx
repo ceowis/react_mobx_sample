@@ -54,6 +54,10 @@ const router = createBrowserRouter([
         path: 'App',
         element: <App />,
       },
+      {
+        path: 'song',
+        element: <song />,
+      },
     ],
   },
 ]);
